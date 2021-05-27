@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Profile({
-  information: { fullname, bio, profession },
-  handlname,
+  card: { fullname, bio, profession },
+  myFunction,
   children,
 }) {
   return (
@@ -12,13 +12,13 @@ function Profile({
       <h1>{fullname}</h1>
       <h2>{bio}</h2>
       <h2>{profession}</h2>
-      <button onClick={() => handlname(fullname)}>What's your name?</button>
+      <button onClick={() => myFunction(fullname)}>What's your name?</button>
     </div>
   );
 }
 
 Profile.defaultProps = {
-  information: {
+  card: {
     fullname: "foulén",
     bio: "Unknown",
     profession: "Unknown",
